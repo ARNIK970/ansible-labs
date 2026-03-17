@@ -1,0 +1,44 @@
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.47.100"
+        ],
+        "ansible_board_name": "VirtualBox",
+        "ansible_board_vendor": "Oracle Corporation",
+        "ansible_fqdn": "TestPC1",
+        "ansible_os_family": "Debian",
+        "ansible_uptime_seconds": 8170,
+        "ansible_user_id": "temniynik"
+    },
+    "changed": false
+}
+10.0.47.101 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.47.101"
+        ],
+        "ansible_board_name": "VirtualBox",
+        "ansible_board_vendor": "Oracle Corporation",
+        "ansible_fqdn": "TestPC2",
+        "ansible_os_family": "Debian",
+        "ansible_uptime_seconds": 7006,
+        "ansible_user_id": "temniynik",
+        "discovered_interpreter_python": "/usr/bin/python3.13"
+    },
+    "changed": false
+}
+10.0.47.102 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.47.102"
+        ],
+        "ansible_board_name": "VirtualBox",
+        "ansible_board_vendor": "Oracle Corporation",
+        "ansible_fqdn": "TestPC3",
+        "ansible_os_family": "Debian",
+        "ansible_uptime_seconds": 7003,
+        "ansible_user_id": "temniynik",
+        "discovered_interpreter_python": "/usr/bin/python3.13"
+    },
+    "changed": false
+}
