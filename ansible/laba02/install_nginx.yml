@@ -1,0 +1,67 @@
+---
+- name: Install and configure nginx
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    nginx_site_conf: /etc/nginx/sites-available/default
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Install curl for testing
+      apt:
+        name: curl
+        state: present
+
+    - name: Create custom nginx config from template
+      template:
+        src: nginx_default.conf.j2
+        dest: "{{ nginx_site_conf }}"
+        owner: root
+        group: root
+        mode: '0644'
+      notify: restart nginx
+
+    - name: Test nginx configuration
+      command: nginx -t
+      register: nginx_test
+      changed_when: false
+
+    - name: Show nginx test result
+      debug:
+        var: nginx_test.stdout_lines
+
+    - name: Ensure nginx is running and enabled
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Wait for nginx to start
+      wait_for:
+        port: 80
+        delay: 2
+        timeout: 10
+
+    - name: Verify headers with curl
+      command: curl --head http://{{ ansible_default_ipv4.address }}
+      register: curl_result
+      changed_when: false
+
+    - name: Show curl output
+      debug:
+        var: curl_result.stdout_lines
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted

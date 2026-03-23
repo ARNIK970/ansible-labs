@@ -1,0 +1,55 @@
+
+PLAY [Install and configure nginx] *********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Update apt cache] ********************************************************
+ok: [10.0.47.102]
+
+TASK [Install nginx] ***********************************************************
+ok: [10.0.47.102]
+
+TASK [Install curl for testing] ************************************************
+ok: [10.0.47.102]
+
+TASK [Create custom nginx config from template] ********************************
+ok: [10.0.47.102]
+
+TASK [Test nginx configuration] ************************************************
+ok: [10.0.47.102]
+
+TASK [Show nginx test result] **************************************************
+ok: [10.0.47.102] => {
+    "nginx_test.stdout_lines": []
+}
+
+TASK [Ensure nginx is running and enabled] *************************************
+ok: [10.0.47.102]
+
+TASK [Wait for nginx to start] *************************************************
+ok: [10.0.47.102]
+
+TASK [Verify headers with curl] ************************************************
+ok: [10.0.47.102]
+
+TASK [Show curl output] ********************************************************
+ok: [10.0.47.102] => {
+    "curl_result.stdout_lines": [
+        "HTTP/1.1 200 OK",
+        "Server: nginx",
+        "Date: Mon, 23 Mar 2026 16:05:51 GMT",
+        "Content-Type: text/html",
+        "Content-Length: 615",
+        "Last-Modified: Mon, 23 Mar 2026 15:38:25 GMT",
+        "Connection: keep-alive",
+        "ETag: \"69c15e71-267\"",
+        "X-Frame-Options: SAMEORIGIN",
+        "X-Custom-Header: TestAnsiblePlaybook",
+        "Accept-Ranges: bytes"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=11   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
