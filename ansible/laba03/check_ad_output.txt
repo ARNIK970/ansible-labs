@@ -1,0 +1,53 @@
+
+PLAY [Проверка настроек Kerberos и SSSD] ***************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Проверить существование /etc/krb5.conf] **********************************
+ok: [10.0.47.102]
+
+TASK [Ошибка, если krb5.conf отсутствует] **************************************
+skipping: [10.0.47.102]
+
+TASK [Проверить default_etypes] ************************************************
+ok: [10.0.47.102]
+
+TASK [Проверить default_as_etypes] *********************************************
+ok: [10.0.47.102]
+
+TASK [Проверить default_tgs_etypes] ********************************************
+ok: [10.0.47.102]
+
+TASK [Вывести результат проверки krb5.conf] ************************************
+ok: [10.0.47.102] => {
+    "msg": [
+        "default_etypes: найдено",
+        "default_as_etypes: найдено",
+        "default_tgs_etypes: найдено"
+    ]
+}
+
+TASK [Проверить наличие конфигурационных файлов SSSD] **************************
+ok: [10.0.47.102]
+
+TASK [Ошибка, если файлы SSSD отсутствуют] *************************************
+skipping: [10.0.47.102]
+
+TASK [Проверить cache_credentials = False] *************************************
+ok: [10.0.47.102] => (item={'path': '/etc/sssd/sssd.conf', 'mode': '0640', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 253, 'inode': 2359665, 'dev': 2049, 'nlink': 1, 'atime': 1774551712.7439938, 'mtime': 1774550140.0356765, 'ctime': 1774551712.7039943, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': False, 'xoth': False, 'isuid': False, 'isgid': False})
+
+TASK [Проверить fallback_homedir с подстановкой %d] ****************************
+ok: [10.0.47.102] => (item={'path': '/etc/sssd/sssd.conf', 'mode': '0640', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 253, 'inode': 2359665, 'dev': 2049, 'nlink': 1, 'atime': 1774551712.7439938, 'mtime': 1774550140.0356765, 'ctime': 1774551712.7039943, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': False, 'xoth': False, 'isuid': False, 'isgid': False})
+
+TASK [Вывести результаты проверки SSSD] ****************************************
+ok: [10.0.47.102] => {
+    "msg": "Найденные файлы SSSD:\nФайл: /etc/sssd/sssd.conf\n  cache_credentials = False: найдено\n  fallback_homedir содержит %d: найдено\n"
+}
+
+TASK [Итоговая проверка (хотя бы один файл корректен)] *************************
+skipping: [10.0.47.102]
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=10   changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+

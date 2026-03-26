@@ -1,0 +1,49 @@
+---
+- name: Настройка TMOUT (тайм-аут бездействия)
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    tmout_config: |
+      # Тайм-аут бездействия 15 минут
+      TMOUT=900
+      readonly TMOUT
+  tasks:
+    - name: Проверить, есть ли уже настройка TMOUT в /etc/profile
+      lineinfile:
+        path: /etc/profile
+        regexp: '^TMOUT='
+        state: absent
+      check_mode: yes
+      register: tmout_exists
+      changed_when: false
+
+    - name: Добавить настройку TMOUT в /etc/profile (если отсутствует)
+      blockinfile:
+        path: /etc/profile
+        block: "{{ tmout_config }}"
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - TMOUT"
+        insertbefore: BOF
+      when: tmout_exists.found == 0
+
+    - name: Проверить наличие TMOUT в /etc/bash.bashrc (для интерактивных оболочек)
+      lineinfile:
+        path: /etc/bash.bashrc
+        line: "TMOUT=900"
+        state: present
+      register: bashrc_modified
+
+    - name: Проверить наличие readonly TMOUT в /etc/bash.bashrc
+      lineinfile:
+        path: /etc/bash.bashrc
+        line: "readonly TMOUT"
+        state: present
+      register: bashrc_readonly_modified
+
+    - name: Вывод результата
+      debug:
+        msg: |
+          Настройки TMOUT добавлены:
+          - /etc/profile: {{ 'добавлено' if tmout_exists.found == 0 else 'уже было' }}
+          - /etc/bash.bashrc (TMOUT): {{ 'добавлено' if bashrc_modified.changed else 'уже было' }}
+          - /etc/bash.bashrc (readonly): {{ 'добавлено' if bashrc_readonly_modified.changed else 'уже было' }}

@@ -1,0 +1,31 @@
+
+PLAY [Настройка Kerberos и SSSD] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Установить необходимые пакеты] *******************************************
+ok: [10.0.47.102]
+
+TASK [Создать /etc/krb5.conf] **************************************************
+ok: [10.0.47.102]
+
+TASK [Создать /etc/sssd/sssd.conf] *********************************************
+changed: [10.0.47.102]
+
+TASK [Убедиться, что служба sssd запущена и включена] **************************
+[ERROR]: Task failed: Module failed: Unable to start service sssd: Job for sssd.service failed because the control process exited with error code.
+See "systemctl status sssd.service" and "journalctl -xeu sssd.service" for details.
+
+Origin: /home/temniynik/ansible-labs/ansible/laba03/configure_ad.yml:59:7
+
+57       register: sssd_created
+58
+59     - name: Убедиться, что служба sssd запущена и включена
+         ^ column 7
+
+fatal: [10.0.47.102]: FAILED! => {"changed": false, "msg": "Unable to start service sssd: Job for sssd.service failed because the control process exited with error code.\nSee \"systemctl status sssd.service\" and \"journalctl -xeu sssd.service\" for details.\n"}
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

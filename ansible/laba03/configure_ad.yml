@@ -1,0 +1,63 @@
+---
+- name: Настройка Kerberos и SSSD
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    krb5_config: |
+      [libdefaults]
+        default_realm = YOUR.DOMAIN
+        dns_lookup_realm = false
+        dns_lookup_kdc = true
+        default_etypes = aes128-cts-hmac-sha1-96, aes256-cts-hmac-sha1-96
+        default_as_etypes = aes128-cts-hmac-sha1-96, aes256-cts-hmac-sha1-96
+        default_tgs_etypes = aes128-cts-hmac-sha1-96, aes256-cts-hmac-sha1-96
+    sssd_config: |
+      [sssd]
+        domains = your.domain
+        services = nss, pam
+        config_file_version = 2
+
+      [domain/your.domain]
+        id_provider = ad
+        auth_provider = ad
+        access_provider = ad
+        cache_credentials = False
+        fallback_homedir = /home/%u@%d
+        default_shell = /bin/bash
+  tasks:
+    - name: Установить необходимые пакеты
+      apt:
+        name:
+          - krb5-config
+          - sssd
+          - sssd-tools
+          - libnss-sss
+          - libpam-sss
+          - adcli
+          - oddjob
+          - oddjob-mkhomedir
+        state: present
+        update_cache: yes
+
+    - name: Создать /etc/krb5.conf
+      copy:
+        dest: /etc/krb5.conf
+        content: "{{ krb5_config }}"
+        mode: '0644'
+      register: krb5_created
+
+    - name: Создать /etc/sssd/sssd.conf
+      copy:
+        dest: /etc/sssd/sssd.conf
+        content: "{{ sssd_config }}"
+        mode: '0600'
+        owner: root
+        group: root
+      register: sssd_created
+
+    - name: Вывод результата
+      debug:
+        msg:
+          - "krb5.conf: {{ 'создан' if krb5_created.changed else 'уже существовал' }}"
+          - "sssd.conf: {{ 'создан' if sssd_created.changed else 'уже существовал' }}"

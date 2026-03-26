@@ -1,0 +1,84 @@
+---
+- name: Проверка настроек Kerberos и SSSD
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: Проверить существование /etc/krb5.conf
+      stat:
+        path: /etc/krb5.conf
+      register: krb5_stat
+
+    - name: Ошибка, если krb5.conf отсутствует
+      fail:
+        msg: "Файл /etc/krb5.conf не найден"
+      when: not krb5_stat.stat.exists
+
+    - name: Проверить default_etypes
+      command: grep -E 'default_etypes.*aes128-cts-hmac-sha1-96.*aes256-cts-hmac-sha1-96' /etc/krb5.conf
+      register: etypes
+      failed_when: false
+      changed_when: false
+
+    - name: Проверить default_as_etypes
+      command: grep -E 'default_as_etypes.*aes128-cts-hmac-sha1-96.*aes256-cts-hmac-sha1-96' /etc/krb5.conf
+      register: as_etypes
+      failed_when: false
+      changed_when: false
+
+    - name: Проверить default_tgs_etypes
+      command: grep -E 'default_tgs_etypes.*aes128-cts-hmac-sha1-96.*aes256-cts-hmac-sha1-96' /etc/krb5.conf
+      register: tgs_etypes
+      failed_when: false
+      changed_when: false
+
+    - name: Вывести результат проверки krb5.conf
+      debug:
+        msg:
+          - "default_etypes: {{ 'найдено' if etypes.rc == 0 else 'не найдено' }}"
+          - "default_as_etypes: {{ 'найдено' if as_etypes.rc == 0 else 'не найдено' }}"
+          - "default_tgs_etypes: {{ 'найдено' if tgs_etypes.rc == 0 else 'не найдено' }}"
+
+    - name: Проверить наличие конфигурационных файлов SSSD
+      find:
+        paths:
+          - /etc/sssd
+        patterns: '*.conf'
+        file_type: file
+      register: sssd_files
+
+    - name: Ошибка, если файлы SSSD отсутствуют
+      fail:
+        msg: "Не найдено конфигурационных файлов SSSD (/etc/sssd/*.conf или /etc/sssd/conf.d/*.conf)"
+      when: sssd_files.files | length == 0
+
+    - name: Проверить cache_credentials = False
+      command: grep -i 'cache_credentials.*False' "{{ item.path }}"
+      loop: "{{ sssd_files.files }}"
+      register: cache_creds_check
+      failed_when: false
+      changed_when: false
+
+    - name: Проверить fallback_homedir с подстановкой %d
+      command: grep 'fallback_homedir.*%d' "{{ item.path }}"
+      loop: "{{ sssd_files.files }}"
+      register: fallback_homedir_check
+      failed_when: false
+      changed_when: false
+
+    - name: Вывести результаты проверки SSSD
+      debug:
+        msg: |
+          Найденные файлы SSSD:
+          {% for file in sssd_files.files %}
+          Файл: {{ file.path }}
+            cache_credentials = False: {{ 'найдено' if cache_creds_check.results[loop.index0].rc == 0 else 'не найдено' }}
+            fallback_homedir содержит %d: {{ 'найдено' if fallback_homedir_check.results[loop.index0].rc == 0 else 'не найдено' }}
+          {% endfor %}
+
+    - name: Итоговая проверка (хотя бы один файл корректен)
+      fail:
+        msg: "Настройки SSSD не соответствуют требованиям"
+      when: 
+        - (cache_creds_check.results | selectattr('rc', 'equalto', 0) | list | length == 0) or
+          (fallback_homedir_check.results | selectattr('rc', 'equalto', 0) | list | length == 0)

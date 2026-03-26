@@ -1,0 +1,73 @@
+
+PLAY [Проверка настройки TMOUT] ************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Получить список файлов из /etc/profile.d] ********************************
+ok: [10.0.47.102]
+
+TASK [Объединить список проверяемых файлов] ************************************
+ok: [10.0.47.102]
+
+TASK [Проверка наличия файлов] *************************************************
+ok: [10.0.47.102] => (item=/etc/bash.bashrc)
+ok: [10.0.47.102] => (item=/etc/profile)
+ok: [10.0.47.102] => (item=/etc/profile.d/im-config_wayland.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/gnome-session_gnomerc.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/bash_completion.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/vte-2.91.sh)
+
+TASK [Ошибка, если ни одного файла нет] ****************************************
+skipping: [10.0.47.102]
+
+TASK [Проверить наличие строки TMOUT=900] **************************************
+ok: [10.0.47.102] => (item=/etc/bash.bashrc)
+ok: [10.0.47.102] => (item=/etc/profile)
+ok: [10.0.47.102] => (item=/etc/profile.d/im-config_wayland.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/gnome-session_gnomerc.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/bash_completion.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/vte-2.91.sh)
+
+TASK [Проверить наличие строки readonly TMOUT] *********************************
+ok: [10.0.47.102] => (item=/etc/bash.bashrc)
+ok: [10.0.47.102] => (item=/etc/profile)
+ok: [10.0.47.102] => (item=/etc/profile.d/im-config_wayland.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/gnome-session_gnomerc.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/bash_completion.sh)
+ok: [10.0.47.102] => (item=/etc/profile.d/vte-2.91.sh)
+
+TASK [Сформировать отчёт] ******************************************************
+ok: [10.0.47.102]
+
+TASK [Вывести отчёт] ***********************************************************
+ok: [10.0.47.102] => {
+    "msg": [
+        "Файл: /etc/bash.bashrc",
+        "  TMOUT=900: найдено",
+        "  readonly TMOUT: найдено",
+        "Файл: /etc/profile",
+        "  TMOUT=900: найдено",
+        "  readonly TMOUT: найдено",
+        "Файл: /etc/profile.d/im-config_wayland.sh",
+        "  TMOUT=900: не найдено",
+        "  readonly TMOUT: не найдено",
+        "Файл: /etc/profile.d/gnome-session_gnomerc.sh",
+        "  TMOUT=900: не найдено",
+        "  readonly TMOUT: не найдено",
+        "Файл: /etc/profile.d/bash_completion.sh",
+        "  TMOUT=900: не найдено",
+        "  readonly TMOUT: не найдено",
+        "Файл: /etc/profile.d/vte-2.91.sh",
+        "  TMOUT=900: не найдено",
+        "  readonly TMOUT: не найдено",
+        ""
+    ]
+}
+
+TASK [Итоговая проверка] *******************************************************
+skipping: [10.0.47.102]
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=8    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+

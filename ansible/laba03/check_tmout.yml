@@ -1,0 +1,65 @@
+---
+- name: Проверка настройки TMOUT
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    files_to_check:
+      - /etc/bash.bashrc
+      - /etc/profile
+    profile_d_files: /etc/profile.d/*.sh
+  tasks:
+    - name: Получить список файлов из /etc/profile.d
+      find:
+        paths: /etc/profile.d
+        patterns: '*.sh'
+        file_type: file
+      register: profile_d_list
+
+    - name: Объединить список проверяемых файлов
+      set_fact:
+        all_files: "{{ files_to_check + profile_d_list.files | map(attribute='path') | list }}"
+
+    - name: Проверка наличия файлов
+      stat:
+        path: "{{ item }}"
+      loop: "{{ all_files }}"
+      register: file_exists
+      ignore_errors: yes
+
+    - name: Ошибка, если ни одного файла нет
+      fail:
+        msg: "Не найдено ни одного файла из списка: {{ all_files }}"
+      when: file_exists.results | selectattr('stat.exists', 'equalto', True) | list | length == 0
+
+    - name: Проверить наличие строки TMOUT=900
+      shell: grep -l '^TMOUT=900$' "{{ item }}" || true
+      loop: "{{ all_files }}"
+      register: tmout_900
+      changed_when: false
+
+    - name: Проверить наличие строки readonly TMOUT
+      shell: grep -l '^readonly TMOUT$' "{{ item }}" || true
+      loop: "{{ all_files }}"
+      register: tmout_readonly
+      changed_when: false
+
+    - name: Сформировать отчёт
+      set_fact:
+        tmout_report: |
+          {% for file in all_files %}
+          Файл: {{ file }}
+            TMOUT=900: {{ 'найдено' if (tmout_900.results | selectattr('item', 'equalto', file) | map(attribute='stdout') | first | trim != '') else 'не найдено' }}
+            readonly TMOUT: {{ 'найдено' if (tmout_readonly.results | selectattr('item', 'equalto', file) | map(attribute='stdout') | first | trim != '') else 'не найдено' }}
+          {% endfor %}
+
+    - name: Вывести отчёт
+      debug:
+        msg: "{{ tmout_report.split('\n') }}"
+
+    - name: Итоговая проверка
+      fail:
+        msg: "Настройка TMOUT не найдена ни в одном из файлов"
+      when: 
+        - (tmout_900.results | selectattr('stdout', 'ne', '') | list | length == 0) or
+          (tmout_readonly.results | selectattr('stdout', 'ne', '') | list | length == 0)
