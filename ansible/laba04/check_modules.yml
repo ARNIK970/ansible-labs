@@ -1,0 +1,28 @@
+---
+- name: Проверка отключения неиспользуемых модулей ФС
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    modules:
+      - cramfs
+      - freevxfs
+      - jffs2
+      - hfs
+      - hfsplus
+      - squashfs
+  tasks:
+    - name: Проверить загруженные модули
+      command: lsmod
+      register: lsmod_output
+      changed_when: false
+
+    - name: Поиск нежелательных модулей
+      set_fact:
+        loaded_modules: "{{ lsmod_output.stdout_lines | map('regex_search', '^(' + modules|join('|') + ')') | select('string') | list }}"
+
+    - name: Вывести результат
+      debug:
+        msg: |
+          Загруженные нежелательные модули: {{ loaded_modules if loaded_modules else 'нет' }}
+          Статус: {{ 'OK, все модули отключены' if not loaded_modules else 'ВНИМАНИЕ: обнаружены загруженные модули!' }}
