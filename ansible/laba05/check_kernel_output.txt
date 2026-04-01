@@ -1,0 +1,81 @@
+
+PLAY [Проверка параметров ядра (рекомендации ФСТЭК)] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Получить текущие значения sysctl] ****************************************
+ok: [10.0.47.102] => (item=kernel.dmesg_restrict)
+ok: [10.0.47.102] => (item=kernel.kptr_restrict)
+ok: [10.0.47.102] => (item=kernel.randomize_va_space)
+ok: [10.0.47.102] => (item=kernel.yama.ptrace_scope)
+ok: [10.0.47.102] => (item=fs.protected_symlinks)
+ok: [10.0.47.102] => (item=fs.protected_hardlinks)
+ok: [10.0.47.102] => (item=net.core.bpf_jit_harden)
+ok: [10.0.47.102] => (item=kernel.perf_event_paranoid)
+ok: [10.0.47.102] => (item=kernel.kexec_load_disabled)
+ok: [10.0.47.102] => (item=user.max_user_namespaces)
+ok: [10.0.47.102] => (item=kernel.unprivileged_bpf_disabled)
+ok: [10.0.47.102] => (item=vm.unprivileged_userfaultfd)
+ok: [10.0.47.102] => (item=dev.tty.ldisc_autoload)
+ok: [10.0.47.102] => (item=vm.mmap_min_addr)
+ok: [10.0.47.102] => (item=fs.suid_dumpable)
+ok: [10.0.47.102] => (item=fs.protected_fifos)
+ok: [10.0.47.102] => (item=fs.protected_regular)
+
+TASK [Сравнить sysctl значения] ************************************************
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '1', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.dmesg_restrict'], 'start': '2026-04-01 20:02:04.931379', 'end': '2026-04-01 20:02:04.935620', 'delta': '0:00:00.004241', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.dmesg_restrict', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['1'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.dmesg_restrict', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.kptr_restrict'], 'start': '2026-04-01 20:02:05.338924', 'end': '2026-04-01 20:02:05.342564', 'delta': '0:00:00.003640', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.kptr_restrict', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.kptr_restrict', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '2', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.randomize_va_space'], 'start': '2026-04-01 20:02:05.755113', 'end': '2026-04-01 20:02:05.759267', 'delta': '0:00:00.004154', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.randomize_va_space', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['2'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.randomize_va_space', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.yama.ptrace_scope'], 'start': '2026-04-01 20:02:06.136250', 'end': '2026-04-01 20:02:06.140282', 'delta': '0:00:00.004032', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.yama.ptrace_scope', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.yama.ptrace_scope', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '1', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'fs.protected_symlinks'], 'start': '2026-04-01 20:02:06.572696', 'end': '2026-04-01 20:02:06.577454', 'delta': '0:00:00.004758', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n fs.protected_symlinks', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['1'], 'stderr_lines': [], 'failed': False, 'item': 'fs.protected_symlinks', 'ansible_loop_var': 'item'}) 
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '1', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'fs.protected_hardlinks'], 'start': '2026-04-01 20:02:07.063045', 'end': '2026-04-01 20:02:07.068035', 'delta': '0:00:00.004990', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n fs.protected_hardlinks', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['1'], 'stderr_lines': [], 'failed': False, 'item': 'fs.protected_hardlinks', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'net.core.bpf_jit_harden'], 'start': '2026-04-01 20:02:07.429621', 'end': '2026-04-01 20:02:07.432768', 'delta': '0:00:00.003147', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n net.core.bpf_jit_harden', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'net.core.bpf_jit_harden', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '3', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.perf_event_paranoid'], 'start': '2026-04-01 20:02:07.769170', 'end': '2026-04-01 20:02:07.772394', 'delta': '0:00:00.003224', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.perf_event_paranoid', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['3'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.perf_event_paranoid', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.kexec_load_disabled'], 'start': '2026-04-01 20:02:08.147381', 'end': '2026-04-01 20:02:08.150464', 'delta': '0:00:00.003083', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.kexec_load_disabled', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.kexec_load_disabled', 'ansible_loop_var': 'item'})
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '15451', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'user.max_user_namespaces'], 'start': '2026-04-01 20:02:08.481701', 'end': '2026-04-01 20:02:08.484835', 'delta': '0:00:00.003134', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n user.max_user_namespaces', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['15451'], 'stderr_lines': [], 'failed': False, 'item': 'user.max_user_namespaces', 'ansible_loop_var': 'item'})
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '2', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'kernel.unprivileged_bpf_disabled'], 'start': '2026-04-01 20:02:08.823474', 'end': '2026-04-01 20:02:08.826528', 'delta': '0:00:00.003054', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n kernel.unprivileged_bpf_disabled', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['2'], 'stderr_lines': [], 'failed': False, 'item': 'kernel.unprivileged_bpf_disabled', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'vm.unprivileged_userfaultfd'], 'start': '2026-04-01 20:02:09.159948', 'end': '2026-04-01 20:02:09.163031', 'delta': '0:00:00.003083', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n vm.unprivileged_userfaultfd', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'vm.unprivileged_userfaultfd', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '1', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'dev.tty.ldisc_autoload'], 'start': '2026-04-01 20:02:09.497670', 'end': '2026-04-01 20:02:09.500815', 'delta': '0:00:00.003145', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n dev.tty.ldisc_autoload', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['1'], 'stderr_lines': [], 'failed': False, 'item': 'dev.tty.ldisc_autoload', 'ansible_loop_var': 'item'})
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '65536', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'vm.mmap_min_addr'], 'start': '2026-04-01 20:02:09.838551', 'end': '2026-04-01 20:02:09.841948', 'delta': '0:00:00.003397', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n vm.mmap_min_addr', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['65536'], 'stderr_lines': [], 'failed': False, 'item': 'vm.mmap_min_addr', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '0', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'fs.suid_dumpable'], 'start': '2026-04-01 20:02:10.197495', 'end': '2026-04-01 20:02:10.201029', 'delta': '0:00:00.003534', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n fs.suid_dumpable', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['0'], 'stderr_lines': [], 'failed': False, 'item': 'fs.suid_dumpable', 'ansible_loop_var': 'item'}) 
+ok: [10.0.47.102] => (item={'changed': False, 'stdout': '1', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'fs.protected_fifos'], 'start': '2026-04-01 20:02:10.548954', 'end': '2026-04-01 20:02:10.552100', 'delta': '0:00:00.003146', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n fs.protected_fifos', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['1'], 'stderr_lines': [], 'failed': False, 'item': 'fs.protected_fifos', 'ansible_loop_var': 'item'})
+skipping: [10.0.47.102] => (item={'changed': False, 'stdout': '2', 'stderr': '', 'rc': 0, 'cmd': ['sysctl', '-n', 'fs.protected_regular'], 'start': '2026-04-01 20:02:10.896634', 'end': '2026-04-01 20:02:10.900058', 'delta': '0:00:00.003424', 'msg': '', 'invocation': {'module_args': {'_raw_params': 'sysctl -n fs.protected_regular', '_uses_shell': False, 'expand_argument_vars': True, 'stdin_add_newline': True, 'strip_empty_ends': True, 'cmd': None, 'argv': None, 'chdir': None, 'executable': None, 'creates': None, 'removes': None, 'stdin': None}}, 'stdout_lines': ['2'], 'stderr_lines': [], 'failed': False, 'item': 'fs.protected_regular', 'ansible_loop_var': 'item'}) 
+
+TASK [Проверить существование /etc/default/grub] *******************************
+ok: [10.0.47.102]
+
+TASK [Получить содержимое GRUB_CMDLINE_LINUX_DEFAULT] **************************
+ok: [10.0.47.102]
+
+TASK [Проверить наличие опций в GRUB] ******************************************
+ok: [10.0.47.102] => (item=vsyscall=none)
+ok: [10.0.47.102] => (item=debugfs=no-mount)
+ok: [10.0.47.102] => (item=tsx=off)
+ok: [10.0.47.102] => (item=slab_nomerge)
+ok: [10.0.47.102] => (item=init_on_alloc=1)
+ok: [10.0.47.102] => (item=randomize_kstack_offset=1)
+ok: [10.0.47.102] => (item=iommu=force)
+ok: [10.0.47.102] => (item=iommu.strict=1)
+ok: [10.0.47.102] => (item=iommu.passthrough=0)
+ok: [10.0.47.102] => (item=mitigations=auto,nosmt)
+
+TASK [Вывести отчёт о несоответствиях] *****************************************
+ok: [10.0.47.102] => {
+    "msg": "Несоответствия sysctl:\nkernel.kptr_restrict = 0 (ожидалось 2)\\nkernel.yama.ptrace_scope = 0 (ожидалось 3)\\nnet.core.bpf_jit_harden = 0 (ожидалось 2)\\nkernel.kexec_load_disabled = 0 (ожидалось 1)\\nuser.max_user_namespaces = 15451 (ожидалось 0)\\nkernel.unprivileged_bpf_disabled = 2 (ожидалось 1)\\ndev.tty.ldisc_autoload = 1 (ожидалось 0)\\nvm.mmap_min_addr = 65536 (ожидалось 4096)\\nfs.protected_fifos = 1 (ожидалось 2)\nОтсутствуют опции загрузки GRUB:\nvsyscall=none\\ndebugfs=no-mount\\ntsx=off\\nslab_nomerge\\ninit_on_alloc=1\\nrandomize_kstack_offset=1\\niommu=force\\niommu.strict=1\\niommu.passthrough=0\\nmitigations=auto,nosmt\n"
+}
+
+TASK [Завершить с ошибкой при наличии несоответствий] **************************
+[ERROR]: Task failed: Action failed: Обнаружены несоответствия. Проверьте вывод выше.
+Origin: /home/temniynik/ansible-labs/ansible/laba05/check_kernel.yml:91:7
+
+89           {% endif %}
+90
+91     - name: Завершить с ошибкой при наличии несоответствий
+         ^ column 7
+
+fatal: [10.0.47.102]: FAILED! => {"changed": false, "msg": "Обнаружены несоответствия. Проверьте вывод выше."}
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

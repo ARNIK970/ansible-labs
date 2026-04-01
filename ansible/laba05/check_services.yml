@@ -1,0 +1,47 @@
+---
+- name: Проверка, что нежелательные службы неактивны
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    unwanted_services:
+      - autofs
+      - avahi-daemon
+      - dhcpd
+      - named
+      - vsftpd
+      - slapd
+      - nfs-server
+      - nis
+      - cups
+      - smbd
+      - snmpd
+      - tftpd
+      - httpd
+      - nginx
+      - xinetd
+      - postfix
+      - sendmail
+  tasks:
+    - name: Получить факты о службах
+      service_facts:
+      register: services
+
+    - name: Проверить, что службы не активны
+      set_fact:
+        active_services: "{{ active_services | default([]) + [item] }}"
+      loop: "{{ unwanted_services }}"
+      when:
+        - item in services.ansible_facts.services
+        - services.ansible_facts.services[item].state == 'running'
+
+    - name: Вывести отчёт
+      debug:
+        msg: |
+          Активные службы из списка: {{ active_services | default([]) }}
+          Статус: {{ 'OK, все службы отключены' if not active_services else 'ВНИМАНИЕ: обнаружены активные службы!' }}
+
+    - name: Завершить с ошибкой, если найдены активные службы
+      fail:
+        msg: "Следующие службы активны: {{ active_services | join(', ') }}"
+      when: active_services | default([]) | length > 0

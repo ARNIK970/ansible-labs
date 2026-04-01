@@ -1,0 +1,47 @@
+
+PLAY [Проверка, что нежелательные службы неактивны] ****************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.47.102]
+
+TASK [Получить факты о службах] ************************************************
+ok: [10.0.47.102]
+
+TASK [Проверить, что службы не активны] ****************************************
+skipping: [10.0.47.102] => (item=autofs) 
+skipping: [10.0.47.102] => (item=avahi-daemon) 
+skipping: [10.0.47.102] => (item=dhcpd) 
+skipping: [10.0.47.102] => (item=named) 
+skipping: [10.0.47.102] => (item=vsftpd) 
+skipping: [10.0.47.102] => (item=slapd) 
+skipping: [10.0.47.102] => (item=nfs-server) 
+skipping: [10.0.47.102] => (item=nis) 
+ok: [10.0.47.102] => (item=cups)
+skipping: [10.0.47.102] => (item=smbd) 
+skipping: [10.0.47.102] => (item=snmpd) 
+skipping: [10.0.47.102] => (item=tftpd) 
+skipping: [10.0.47.102] => (item=httpd) 
+ok: [10.0.47.102] => (item=nginx)
+skipping: [10.0.47.102] => (item=xinetd) 
+skipping: [10.0.47.102] => (item=postfix) 
+skipping: [10.0.47.102] => (item=sendmail) 
+
+TASK [Вывести отчёт] ***********************************************************
+ok: [10.0.47.102] => {
+    "msg": "Активные службы из списка: ['cups', 'nginx']\nСтатус: ВНИМАНИЕ: обнаружены активные службы!\n"
+}
+
+TASK [Завершить с ошибкой, если найдены активные службы] ***********************
+[ERROR]: Task failed: Action failed: Следующие службы активны: cups, nginx
+Origin: /home/temniynik/ansible-labs/ansible/laba05/check_services.yml:44:7
+
+42           Статус: {{ 'OK, все службы отключены' if not active_services else 'ВНИМАНИЕ: обнаружены активные службы!...
+43
+44     - name: Завершить с ошибкой, если найдены активные службы
+         ^ column 7
+
+fatal: [10.0.47.102]: FAILED! => {"changed": false, "msg": "Следующие службы активны: cups, nginx"}
+
+PLAY RECAP *********************************************************************
+10.0.47.102                : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

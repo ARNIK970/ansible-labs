@@ -1,0 +1,95 @@
+---
+- name: Проверка параметров ядра (рекомендации ФСТЭК)
+  hosts: 10.0.47.102
+  become: yes
+  gather_facts: yes
+  vars:
+    sysctl_expected:
+      kernel.dmesg_restrict: 1
+      kernel.kptr_restrict: 2
+      kernel.randomize_va_space: 2
+      kernel.yama.ptrace_scope: 3
+      fs.protected_symlinks: 1
+      fs.protected_hardlinks: 1
+      net.core.bpf_jit_harden: 2
+      kernel.perf_event_paranoid: 3
+      kernel.kexec_load_disabled: 1
+      user.max_user_namespaces: 0
+      kernel.unprivileged_bpf_disabled: 1
+      vm.unprivileged_userfaultfd: 0
+      dev.tty.ldisc_autoload: 0
+      vm.mmap_min_addr: 4096
+      fs.suid_dumpable: 0
+      fs.protected_fifos: 2
+      fs.protected_regular: 2
+    grub_options:
+      - vsyscall=none
+      - debugfs=no-mount
+      - tsx=off
+      - slab_nomerge
+      - init_on_alloc=1
+      - randomize_kstack_offset=1
+      - iommu=force
+      - iommu.strict=1
+      - iommu.passthrough=0
+      - mitigations=auto,nosmt
+  tasks:
+    # ---------- Проверка sysctl ----------
+    - name: Получить текущие значения sysctl
+      command: sysctl -n {{ item }}
+      loop: "{{ sysctl_expected.keys() | list }}"
+      register: sysctl_values
+      changed_when: false
+
+    - name: Сравнить sysctl значения
+      set_fact:
+        sysctl_mismatches: >-
+          {{ sysctl_mismatches | default([]) + 
+             [item.item + ' = ' + item.stdout | trim + ' (ожидалось ' + sysctl_expected[item.item] | string + ')'] }}
+      loop: "{{ sysctl_values.results }}"
+      when: item.stdout | trim != sysctl_expected[item.item] | string
+
+    # ---------- Проверка GRUB ----------
+    - name: Проверить существование /etc/default/grub
+      stat:
+        path: /etc/default/grub
+      register: grub_file
+
+    - name: Получить содержимое GRUB_CMDLINE_LINUX_DEFAULT
+      command: grep -Po 'GRUB_CMDLINE_LINUX_DEFAULT="\K[^"]*' /etc/default/grub
+      register: grub_cmdline
+      when: grub_file.stat.exists
+      changed_when: false
+
+    - name: Проверить наличие опций в GRUB
+      set_fact:
+        grub_missing_options: "{{ grub_missing_options | default([]) + [item] }}"
+      loop: "{{ grub_options }}"
+      when:
+        - grub_file.stat.exists
+        - item not in grub_cmdline.stdout
+      ignore_errors: yes
+
+    - name: Вывести отчёт о несоответствиях
+      debug:
+        msg: |
+          {% if sysctl_mismatches is defined %}
+          Несоответствия sysctl:
+          {{ sysctl_mismatches | join('\n') }}
+          {% else %}
+          sysctl-параметры: все соответствуют.
+          {% endif %}
+          {% if grub_missing_options is defined and grub_missing_options | length > 0 %}
+          Отсутствуют опции загрузки GRUB:
+          {{ grub_missing_options | join('\n') }}
+          {% elif grub_file.stat.exists %}
+          GRUB_CMDLINE_LINUX_DEFAULT: все опции присутствуют.
+          {% else %}
+          Файл /etc/default/grub не найден, невозможно проверить опции загрузки.
+          {% endif %}
+
+    - name: Завершить с ошибкой при наличии несоответствий
+      fail:
+        msg: "Обнаружены несоответствия. Проверьте вывод выше."
+      when: (sysctl_mismatches is defined and sysctl_mismatches | length > 0) or
+            (grub_missing_options is defined and grub_missing_options | length > 0)
