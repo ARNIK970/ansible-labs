@@ -1,0 +1,688 @@
+----
+time->Sun Apr  5 13:20:52 2026
+type=PROCTITLE msg=audit(1775384452.842:137): proctitle=617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=SYSCALL msg=audit(1775384452.842:137): arch=c000003e syscall=44 success=yes exit=1088 a0=4 a1=7ffcc0f29b40 a2=440 a3=0 items=0 ppid=4064 pid=4065 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384452.842:137): auid=1000 ses=5 subj=unconfined op=add_rule key="sshd_config" list=4 res=1
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.032:144): proctitle=617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=SOCKADDR msg=audit(1775384468.032:144): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384468.032:144): arch=c000003e syscall=44 success=yes exit=1088 a0=4 a1=7ffcc9a4a440 a2=440 a3=0 items=0 ppid=4081 pid=4082 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384468.032:144): auid=1000 ses=5 subj=unconfined op=add_rule key="sshd_config" list=4 res=0
+----
+time->Sun Apr  5 13:21:54 2026
+type=PROCTITLE msg=audit(1775384514.820:217): proctitle=617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=SOCKADDR msg=audit(1775384514.820:217): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384514.820:217): arch=c000003e syscall=44 success=yes exit=1088 a0=4 a1=7fff66915200 a2=440 a3=0 items=0 ppid=4126 pid=4127 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384514.820:217): auid=1000 ses=5 subj=unconfined op=add_rule key="sshd_config" list=4 res=0
+----
+time->Sun Apr  5 13:24:29 2026
+type=PROCTITLE msg=audit(1775384669.975:308): proctitle=746565002D61002F6574632F7373682F737368645F636F6E666967
+type=PATH msg=audit(1775384669.975:308): item=0 name="/etc/ssh/sshd_config" inode=3147675 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384669.975:308): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384669.975:308): arch=c000003e syscall=257 success=yes exit=3 a0=ffffffffffffff9c a1=7fffcaac4731 a2=441 a3=1b6 items=1 ppid=4175 pid=4176 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="tee" exe="/usr/bin/tee" subj=unconfined key="sshd_config"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.048:151): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=SOCKADDR msg=audit(1775384468.048:151): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384468.048:151): arch=c000003e syscall=44 success=yes exit=1068 a0=4 a1=7ffc7ca95290 a2=42c a3=0 items=0 ppid=4086 pid=4087 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384468.048:151): auid=1000 ses=5 subj=unconfined op=add_rule key="file_perms" list=4 res=1
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.060:156): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384468.060:156): item=0 name="/dev/pts/1" inode=4 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:01 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384468.060:156): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384468.060:156): arch=c000003e syscall=92 success=yes exit=0 a0=7ffcb9863ac0 a1=0 a2=5 a3=0 items=1 ppid=3463 pid=4089 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.060:159): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=SOCKADDR msg=audit(1775384468.060:159): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384468.060:159): arch=c000003e syscall=44 success=yes exit=1068 a0=4 a1=7ffd450d0cb0 a2=42c a3=0 items=0 ppid=4091 pid=4092 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384468.060:159): auid=1000 ses=5 subj=unconfined op=add_rule key="file_perms" list=4 res=1
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.072:164): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384468.072:164): item=0 name="/dev/pts/1" inode=4 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:01 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384468.072:164): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384468.072:164): arch=c000003e syscall=92 success=yes exit=0 a0=7ffc0dcc4670 a1=0 a2=5 a3=0 items=1 ppid=3463 pid=4094 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.088:173): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384468.088:173): item=0 name="/dev/pts/1" inode=4 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:01 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384468.088:173): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384468.088:173): arch=c000003e syscall=92 success=yes exit=0 a0=7ffeb4117450 a1=0 a2=5 a3=0 items=1 ppid=3463 pid=4099 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:28 2026
+type=PROCTITLE msg=audit(1775384488.600:189): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384488.600:189): item=0 name="/dev/pts/1" inode=4 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:01 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384488.600:189): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384488.600:189): arch=c000003e syscall=92 success=yes exit=0 a0=7fff4bbb4830 a1=0 a2=5 a3=0 items=1 ppid=3463 pid=4113 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:28 2026
+type=PROCTITLE msg=audit(1775384488.600:193): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=SOCKADDR msg=audit(1775384488.600:193): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384488.600:193): arch=c000003e syscall=44 success=yes exit=1068 a0=4 a1=7ffcadba8bd0 a2=42c a3=0 items=0 ppid=4115 pid=4116 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384488.600:193): auid=1000 ses=5 subj=unconfined op=add_rule key="file_perms" list=4 res=0
+----
+time->Sun Apr  5 13:21:42 2026
+type=PROCTITLE msg=audit(1775384502.538:199): proctitle=7375646F007375
+type=PATH msg=audit(1775384502.538:199): item=0 name="/dev/pts/1" inode=4 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:01 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384502.538:199): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384502.538:199): arch=c000003e syscall=92 success=yes exit=0 a0=7ffd62c75080 a1=0 a2=5 a3=0 items=1 ppid=3463 pid=4118 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:54 2026
+type=PROCTITLE msg=audit(1775384514.820:213): proctitle=7375646F00617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384514.820:213): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384514.820:213): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384514.820:213): arch=c000003e syscall=92 success=yes exit=0 a0=7fff13043310 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4124 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:22:08 2026
+type=PROCTITLE msg=audit(1775384528.666:224): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384528.666:224): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384528.666:224): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384528.666:224): arch=c000003e syscall=92 success=yes exit=0 a0=7ffe5c31c230 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4129 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:22:08 2026
+type=PROCTITLE msg=audit(1775384528.670:228): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=SOCKADDR msg=audit(1775384528.670:228): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384528.670:228): arch=c000003e syscall=44 success=yes exit=1068 a0=4 a1=7ffe477db3d0 a2=42c a3=0 items=0 ppid=4131 pid=4132 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384528.670:228): auid=1000 ses=5 subj=unconfined op=add_rule key="file_perms" list=4 res=0
+----
+time->Sun Apr  5 13:22:22 2026
+type=PROCTITLE msg=audit(1775384542.708:235): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384542.708:235): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384542.708:235): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384542.708:235): arch=c000003e syscall=92 success=yes exit=0 a0=7ffd2f1f71a0 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4134 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:22:22 2026
+type=PROCTITLE msg=audit(1775384542.712:239): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=SOCKADDR msg=audit(1775384542.712:239): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384542.712:239): arch=c000003e syscall=44 success=yes exit=1068 a0=4 a1=7ffcd1fa12c0 a2=42c a3=0 items=0 ppid=4136 pid=4137 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384542.712:239): auid=1000 ses=5 subj=unconfined op=add_rule key="file_perms" list=4 res=0
+----
+time->Sun Apr  5 13:22:36 2026
+type=PROCTITLE msg=audit(1775384556.114:246): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384556.114:246): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384556.114:246): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384556.114:246): arch=c000003e syscall=92 success=yes exit=0 a0=7fffa2139740 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4139 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:22:49 2026
+type=PROCTITLE msg=audit(1775384569.072:257): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384569.072:257): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384569.072:257): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384569.072:257): arch=c000003e syscall=92 success=yes exit=0 a0=7ffe6e94f630 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4144 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.521:271): proctitle=7375646F00617564697463746C002D6C
+type=PATH msg=audit(1775384631.521:271): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.521:271): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384631.521:271): arch=c000003e syscall=92 success=yes exit=0 a0=7fff3b5de3e0 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4149 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.521:275): proctitle=7375646F00746565002F746D702F7265706F7274312E747874
+type=PATH msg=audit(1775384631.521:275): item=0 name="/dev/pts/3" inode=6 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:03 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.521:275): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384631.521:275): arch=c000003e syscall=92 success=yes exit=0 a0=7ffcec8f4b20 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4150 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:24:05 2026
+type=PROCTITLE msg=audit(1775384645.987:288): proctitle=7375646F006C73002F726F6F74
+type=PATH msg=audit(1775384645.987:288): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384645.987:288): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384645.987:288): arch=c000003e syscall=92 success=yes exit=0 a0=7ffe900a85f0 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4158 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:24:29 2026
+type=PROCTITLE msg=audit(1775384669.971:304): proctitle=7375646F00746565002D61002F6574632F7373682F737368645F636F6E666967
+type=PATH msg=audit(1775384669.971:304): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384669.971:304): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384669.971:304): arch=c000003e syscall=92 success=yes exit=0 a0=7ffe6648a130 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4173 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:24:57 2026
+type=PROCTITLE msg=audit(1775384697.346:317): proctitle=7375646F006175736561726368002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384697.346:317): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384697.346:317): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384697.346:317): arch=c000003e syscall=92 success=yes exit=0 a0=7ffc46ebac10 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4179 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:25:10 2026
+type=PROCTITLE msg=audit(1775384710.292:327): proctitle=7375646F006175736561726368002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384710.292:327): item=0 name="/dev/pts/2" inode=5 dev=00:17 mode=020600 ouid=0 ogid=5 rdev=88:02 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384710.292:327): cwd="/home/temniynik"
+type=SYSCALL msg=audit(1775384710.292:327): arch=c000003e syscall=92 success=yes exit=0 a0=7fff6996bec0 a1=0 a2=5 a3=0 items=1 ppid=4123 pid=4183 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="file_perms"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.076:167): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623634002D5300657865637665002D46007569640030002D6B00707269765F657363
+type=SOCKADDR msg=audit(1775384468.076:167): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384468.076:167): arch=c000003e syscall=44 success=yes exit=1064 a0=4 a1=7fff1b4f1cf0 a2=428 a3=0 items=0 ppid=4096 pid=4097 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384468.076:167): auid=1000 ses=5 subj=unconfined op=add_rule key="priv_esc" list=4 res=1
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.084:170): proctitle=2F7573722F7362696E2F756E69785F63686B7077640074656D6E69796E696B0063686B657870697279
+type=PATH msg=audit(1775384468.084:170): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384468.084:170): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384468.084:170): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384468.084:170): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384468.084:170): argc=3 a0="/usr/sbin/unix_chkpwd" a1="temniynik" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384468.084:170): arch=c000003e syscall=59 success=yes exit=0 a0=7f2c5b09504a a1=7ffeb4118170 a2=7f2c5b098018 a3=0 items=3 ppid=4099 pid=4100 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.088:176): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384468.088:176): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384468.088:176): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384468.088:176): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384468.088:176): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384468.088:176): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b32" a5="-S" a6="execve" a7="-F" a8="uid=0" a9="-k" a10="priv_esc"
+type=SYSCALL msg=audit(1775384468.088:176): arch=c000003e syscall=59 success=yes exit=0 a0=55d0e0e4e0e8 a1=55d0e0e42420 a2=55d0e0e456b0 a3=0 items=3 ppid=4101 pid=4102 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:08 2026
+type=PROCTITLE msg=audit(1775384468.088:177): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=SOCKADDR msg=audit(1775384468.088:177): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384468.088:177): arch=c000003e syscall=44 success=yes exit=1064 a0=4 a1=7ffd9abe7570 a2=428 a3=0 items=0 ppid=4101 pid=4102 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384468.088:177): auid=1000 ses=5 subj=unconfined op=add_rule key="priv_esc" list=4 res=1
+----
+time->Sun Apr  5 13:21:10 2026
+type=PROCTITLE msg=audit(1775384470.753:180): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384470.753:180): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384470.753:180): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384470.753:180): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384470.753:180): cwd="/"
+type=EXECVE msg=audit(1775384470.753:180): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384470.753:180): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c0a41c0 a1=7fe98c017350 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4105 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:10 2026
+type=PROCTITLE msg=audit(1775384470.773:181): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384470.773:181): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384470.773:181): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384470.773:181): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384470.773:181): cwd="/"
+type=EXECVE msg=audit(1775384470.773:181): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384470.773:181): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c0809a0 a1=7fe98c003030 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4106 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:11 2026
+type=PROCTITLE msg=audit(1775384471.449:182): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384471.449:182): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384471.449:182): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384471.449:182): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384471.449:182): cwd="/"
+type=EXECVE msg=audit(1775384471.449:182): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384471.449:182): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c02e030 a1=7fe98c04e870 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4108 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:11 2026
+type=PROCTITLE msg=audit(1775384471.473:183): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384471.473:183): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384471.473:183): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384471.473:183): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384471.473:183): cwd="/"
+type=EXECVE msg=audit(1775384471.473:183): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384471.473:183): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c084850 a1=7fe98c0a5db0 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4109 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:12 2026
+type=PROCTITLE msg=audit(1775384472.165:184): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384472.165:184): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384472.165:184): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384472.165:184): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384472.165:184): cwd="/"
+type=EXECVE msg=audit(1775384472.165:184): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384472.165:184): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c00dd30 a1=7fe98c04e870 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4111 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:12 2026
+type=PROCTITLE msg=audit(1775384472.185:185): proctitle=2F7573722F62696E2F64706B67002D2D666F7263652D636F6E66646566002D2D666F7263652D636F6E666F6C64002D2D7072696E742D666F726569676E2D61726368697465637475726573
+type=PATH msg=audit(1775384472.185:185): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384472.185:185): item=1 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384472.185:185): item=0 name="/usr/bin/dpkg" inode=1443115 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384472.185:185): cwd="/"
+type=EXECVE msg=audit(1775384472.185:185): argc=4 a0="/usr/bin/dpkg" a1="--force-confdef" a2="--force-confold" a3="--print-foreign-architectures"
+type=SYSCALL msg=audit(1775384472.185:185): arch=c000003e syscall=59 success=yes exit=0 a0=7fe98c031f20 a1=7fe98c0218a0 a2=55cd29d6fe10 a3=4 items=3 ppid=1960 pid=4112 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="dpkg" exe="/usr/bin/dpkg" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:28 2026
+type=PROCTITLE msg=audit(1775384488.596:186): proctitle=2F7573722F7362696E2F756E69785F63686B7077640074656D6E69796E696B0063686B657870697279
+type=PATH msg=audit(1775384488.596:186): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384488.596:186): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384488.596:186): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384488.596:186): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384488.596:186): argc=3 a0="/usr/sbin/unix_chkpwd" a1="temniynik" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384488.596:186): arch=c000003e syscall=59 success=yes exit=0 a0=7f79a26be04a a1=7fff4bbb5550 a2=7f79a26c1018 a3=0 items=3 ppid=4113 pid=4114 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:21:28 2026
+type=PROCTITLE msg=audit(1775384488.600:192): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384488.600:192): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384488.600:192): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384488.600:192): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384488.600:192): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384488.600:192): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b64" a5="-S" a6="chmod" a7="-S" a8="chown" a9="-k" a10="file_perms"
+type=SYSCALL msg=audit(1775384488.600:192): arch=c000003e syscall=59 success=yes exit=0 a0=561b45fb00e8 a1=561b45fa4420 a2=561b45fa76b0 a3=0 items=3 ppid=4115 pid=4116 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:42 2026
+type=PROCTITLE msg=audit(1775384502.534:196): proctitle=2F7573722F7362696E2F756E69785F63686B7077640074656D6E69796E696B0063686B657870697279
+type=PATH msg=audit(1775384502.534:196): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.534:196): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.534:196): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384502.534:196): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384502.534:196): argc=3 a0="/usr/sbin/unix_chkpwd" a1="temniynik" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384502.534:196): arch=c000003e syscall=59 success=yes exit=0 a0=7f943ecf704a a1=7ffd62c75da0 a2=7f943ecfa018 a3=0 items=3 ppid=4118 pid=4119 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:21:42 2026
+type=PROCTITLE msg=audit(1775384502.538:202): proctitle="su"
+type=PATH msg=audit(1775384502.538:202): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.538:202): item=1 name="/usr/bin/su" inode=1445824 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.538:202): item=0 name="/usr/bin/su" inode=1445824 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384502.538:202): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384502.538:202): argc=1 a0="su"
+type=SYSCALL msg=audit(1775384502.538:202): arch=c000003e syscall=59 success=yes exit=0 a0=5555a31587d8 a1=5555a316b420 a2=5555a316e650 a3=0 items=3 ppid=4120 pid=4121 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="su" exe="/usr/bin/su" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:42 2026
+type=PROCTITLE msg=audit(1775384502.546:204): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384502.546:204): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.546:204): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.546:204): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384502.546:204): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384502.546:204): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384502.546:204): arch=c000003e syscall=59 success=yes exit=0 a0=7fef5368804a a1=7ffddb2789e0 a2=7fef5368b018 a3=0 items=3 ppid=4121 pid=4122 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:21:42 2026
+type=PROCTITLE msg=audit(1775384502.554:208): proctitle="bash"
+type=PATH msg=audit(1775384502.554:208): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.554:208): item=1 name="/bin/bash" inode=1442667 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384502.554:208): item=0 name="/bin/bash" inode=1442667 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384502.554:208): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384502.554:208): argc=1 a0="bash"
+type=SYSCALL msg=audit(1775384502.554:208): arch=c000003e syscall=59 success=yes exit=0 a0=561a6d5148a0 a1=561a6d50db60 a2=7ffddb279498 a3=0 items=3 ppid=4121 pid=4123 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="bash" exe="/usr/bin/bash" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:54 2026
+type=PROCTITLE msg=audit(1775384514.808:209): proctitle=7375646F00617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384514.808:209): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.808:209): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.808:209): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384514.808:209): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384514.808:209): argc=8 a0="sudo" a1="auditctl" a2="-w" a3="/etc/ssh/sshd_config" a4="-p" a5="wa" a6="-k" a7="sshd_config"
+type=SYSCALL msg=audit(1775384514.808:209): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16eb810 a1=55b6e16ec080 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4124 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:21:54 2026
+type=PROCTITLE msg=audit(1775384514.816:210): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384514.816:210): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.816:210): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.816:210): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384514.816:210): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384514.816:210): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384514.816:210): arch=c000003e syscall=59 success=yes exit=0 a0=7fd04144304a a1=7fff13044030 a2=7fd041446018 a3=0 items=3 ppid=4124 pid=4125 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:21:54 2026
+type=PROCTITLE msg=audit(1775384514.820:216): proctitle=617564697463746C002D77002F6574632F7373682F737368645F636F6E666967002D70007761002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384514.820:216): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.820:216): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384514.820:216): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384514.820:216): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384514.820:216): argc=7 a0="auditctl" a1="-w" a2="/etc/ssh/sshd_config" a3="-p" a4="wa" a5="-k" a6="sshd_config"
+type=SYSCALL msg=audit(1775384514.820:216): arch=c000003e syscall=59 success=yes exit=0 a0=55b236b81c78 a1=55b236aede40 a2=55b236b81ca0 a3=0 items=3 ppid=4126 pid=4127 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:08 2026
+type=PROCTITLE msg=audit(1775384528.654:220): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384528.654:220): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.654:220): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.654:220): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384528.654:220): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384528.654:220): argc=12 a0="sudo" a1="auditctl" a2="-a" a3="always,exit" a4="-F" a5="arch=b64" a6="-S" a7="chmod" a8="-S" a9="chown" a10="-k" a11="file_perms"
+type=SYSCALL msg=audit(1775384528.654:220): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec980 a1=55b6e16ec100 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4129 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:08 2026
+type=PROCTITLE msg=audit(1775384528.662:221): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384528.662:221): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.662:221): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.662:221): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384528.662:221): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384528.662:221): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384528.662:221): arch=c000003e syscall=59 success=yes exit=0 a0=7fe437f5104a a1=7ffe5c31cf50 a2=7fe437f54018 a3=0 items=3 ppid=4129 pid=4130 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:22:08 2026
+type=PROCTITLE msg=audit(1775384528.666:227): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384528.666:227): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.666:227): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384528.666:227): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384528.666:227): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384528.666:227): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b64" a5="-S" a6="chmod" a7="-S" a8="chown" a9="-k" a10="file_perms"
+type=SYSCALL msg=audit(1775384528.666:227): arch=c000003e syscall=59 success=yes exit=0 a0=5583d90e6cb8 a1=5583d9053220 a2=5583d90e6ce0 a3=0 items=3 ppid=4131 pid=4132 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:22 2026
+type=PROCTITLE msg=audit(1775384542.696:231): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384542.696:231): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.696:231): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.696:231): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384542.696:231): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384542.696:231): argc=12 a0="sudo" a1="auditctl" a2="-a" a3="always,exit" a4="-F" a5="arch=b32" a6="-S" a7="chmod" a8="-S" a9="chown" a10="-k" a11="file_perms"
+type=SYSCALL msg=audit(1775384542.696:231): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec380 a1=55b6e16eca20 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4134 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:22 2026
+type=PROCTITLE msg=audit(1775384542.708:232): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384542.708:232): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.708:232): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.708:232): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384542.708:232): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384542.708:232): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384542.708:232): arch=c000003e syscall=59 success=yes exit=0 a0=7f40f62f704a a1=7ffd2f1f7ec0 a2=7f40f62fa018 a3=0 items=3 ppid=4134 pid=4135 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:22:22 2026
+type=PROCTITLE msg=audit(1775384542.712:238): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D530063686D6F64002D530063686F776E002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384542.712:238): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.712:238): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384542.712:238): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384542.712:238): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384542.712:238): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b32" a5="-S" a6="chmod" a7="-S" a8="chown" a9="-k" a10="file_perms"
+type=SYSCALL msg=audit(1775384542.712:238): arch=c000003e syscall=59 success=yes exit=0 a0=55cacd0f6cb8 a1=55cacd063220 a2=55cacd0f6ce0 a3=0 items=3 ppid=4136 pid=4137 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:36 2026
+type=PROCTITLE msg=audit(1775384556.098:242): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384556.098:242): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.098:242): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.098:242): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384556.098:242): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384556.098:242): argc=12 a0="sudo" a1="auditctl" a2="-a" a3="always,exit" a4="-F" a5="arch=b64" a6="-S" a7="execve" a8="-F" a9="uid=0" a10="-k" a11="priv_esc"
+type=SYSCALL msg=audit(1775384556.098:242): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec300 a1=55b6e16ecbc0 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4139 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:36 2026
+type=PROCTITLE msg=audit(1775384556.110:243): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384556.110:243): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.110:243): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.110:243): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384556.110:243): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384556.110:243): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384556.110:243): arch=c000003e syscall=59 success=yes exit=0 a0=7f4072a4c04a a1=7fffa213a460 a2=7f4072a4f018 a3=0 items=3 ppid=4139 pid=4140 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:22:36 2026
+type=PROCTITLE msg=audit(1775384556.114:249): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384556.114:249): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.114:249): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384556.114:249): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384556.114:249): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384556.114:249): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b64" a5="-S" a6="execve" a7="-F" a8="uid=0" a9="-k" a10="priv_esc"
+type=SYSCALL msg=audit(1775384556.114:249): arch=c000003e syscall=59 success=yes exit=0 a0=5620f24ddcb8 a1=5620f244a220 a2=5620f24ddce0 a3=0 items=3 ppid=4141 pid=4142 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:36 2026
+type=PROCTITLE msg=audit(1775384556.114:250): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623634002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=SOCKADDR msg=audit(1775384556.114:250): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384556.114:250): arch=c000003e syscall=44 success=yes exit=1064 a0=4 a1=7ffd8145b100 a2=428 a3=0 items=0 ppid=4141 pid=4142 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384556.114:250): auid=1000 ses=5 subj=unconfined op=add_rule key="priv_esc" list=4 res=0
+----
+time->Sun Apr  5 13:22:49 2026
+type=PROCTITLE msg=audit(1775384569.056:253): proctitle=7375646F00617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384569.056:253): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.056:253): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.056:253): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384569.056:253): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384569.056:253): argc=12 a0="sudo" a1="auditctl" a2="-a" a3="always,exit" a4="-F" a5="arch=b32" a6="-S" a7="execve" a8="-F" a9="uid=0" a10="-k" a11="priv_esc"
+type=SYSCALL msg=audit(1775384569.056:253): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ccbd0 a1=55b6e16ecdb0 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4144 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:49 2026
+type=PROCTITLE msg=audit(1775384569.072:254): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384569.072:254): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.072:254): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.072:254): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384569.072:254): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384569.072:254): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384569.072:254): arch=c000003e syscall=59 success=yes exit=0 a0=7f519b8d404a a1=7ffe6e950350 a2=7f519b8d7018 a3=0 items=3 ppid=4144 pid=4145 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:22:49 2026
+type=PROCTITLE msg=audit(1775384569.072:260): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=PATH msg=audit(1775384569.072:260): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.072:260): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384569.072:260): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384569.072:260): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384569.072:260): argc=11 a0="auditctl" a1="-a" a2="always,exit" a3="-F" a4="arch=b32" a5="-S" a6="execve" a7="-F" a8="uid=0" a9="-k" a10="priv_esc"
+type=SYSCALL msg=audit(1775384569.072:260): arch=c000003e syscall=59 success=yes exit=0 a0=556c48718cb8 a1=556c48685220 a2=556c48718ce0 a3=0 items=3 ppid=4146 pid=4147 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:22:49 2026
+type=PROCTITLE msg=audit(1775384569.076:261): proctitle=617564697463746C002D6100616C776179732C65786974002D4600617263683D623332002D5300657865637665002D46007569643D30002D6B00707269765F657363
+type=SOCKADDR msg=audit(1775384569.076:261): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1775384569.076:261): arch=c000003e syscall=44 success=yes exit=1064 a0=4 a1=7ffe989d92f0 a2=428 a3=0 items=0 ppid=4146 pid=4147 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1775384569.076:261): auid=1000 ses=5 subj=unconfined op=add_rule key="priv_esc" list=4 res=0
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.505:264): proctitle=7375646F00617564697463746C002D6C
+type=PATH msg=audit(1775384631.505:264): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.505:264): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.505:264): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.505:264): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.505:264): argc=3 a0="sudo" a1="auditctl" a2="-l"
+type=SYSCALL msg=audit(1775384631.505:264): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec2c0 a1=55b6e16ed190 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4149 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.505:265): proctitle=7375646F00746565002F746D702F7265706F7274312E747874
+type=PATH msg=audit(1775384631.505:265): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.505:265): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.505:265): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.505:265): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.505:265): argc=3 a0="sudo" a1="tee" a2="/tmp/report1.txt"
+type=SYSCALL msg=audit(1775384631.505:265): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec2a0 a1=55b6e16ed190 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4150 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.517:266): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384631.517:266): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.517:266): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.517:266): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.517:266): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.517:266): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384631.517:266): arch=c000003e syscall=59 success=yes exit=0 a0=7fd76b6dc04a a1=7fff3b5df100 a2=7fd76b6df018 a3=0 items=3 ppid=4149 pid=4151 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.517:267): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384631.517:267): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.517:267): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.517:267): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.517:267): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.517:267): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384631.517:267): arch=c000003e syscall=59 success=yes exit=0 a0=7f81214dd04a a1=7ffcec8f5840 a2=7f81214e0018 a3=0 items=3 ppid=4150 pid=4152 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.525:278): proctitle=617564697463746C002D6C
+type=PATH msg=audit(1775384631.525:278): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.525:278): item=1 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.525:278): item=0 name="/usr/sbin/auditctl" inode=1499798 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.525:278): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.525:278): argc=2 a0="auditctl" a1="-l"
+type=SYSCALL msg=audit(1775384631.525:278): arch=c000003e syscall=59 success=yes exit=0 a0=5617426f8c08 a1=561742665220 a2=5617426f8c30 a3=0 items=3 ppid=4153 pid=4154 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:23:51 2026
+type=PROCTITLE msg=audit(1775384631.525:281): proctitle=746565002F746D702F7265706F7274312E747874
+type=PATH msg=audit(1775384631.525:281): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.525:281): item=1 name="/usr/bin/tee" inode=1442939 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384631.525:281): item=0 name="/usr/bin/tee" inode=1442939 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384631.525:281): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384631.525:281): argc=2 a0="tee" a1="/tmp/report1.txt"
+type=SYSCALL msg=audit(1775384631.525:281): arch=c000003e syscall=59 success=yes exit=0 a0=55e50635f7d8 a1=55e506372220 a2=55e506405c40 a3=0 items=3 ppid=4155 pid=4156 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts3 ses=5 comm="tee" exe="/usr/bin/tee" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:05 2026
+type=PROCTITLE msg=audit(1775384645.975:284): proctitle=7375646F006C73002F726F6F74
+type=PATH msg=audit(1775384645.975:284): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.975:284): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.975:284): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384645.975:284): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384645.975:284): argc=3 a0="sudo" a1="ls" a2="/root"
+type=SYSCALL msg=audit(1775384645.975:284): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16cfb90 a1=55b6e16ed070 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4158 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:05 2026
+type=PROCTITLE msg=audit(1775384645.987:285): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384645.987:285): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.987:285): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.987:285): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384645.987:285): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384645.987:285): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384645.987:285): arch=c000003e syscall=59 success=yes exit=0 a0=7fc6ff33704a a1=7ffe900a9310 a2=7fc6ff33a018 a3=0 items=3 ppid=4158 pid=4159 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:24:05 2026
+type=PROCTITLE msg=audit(1775384645.987:291): proctitle=6C73002F726F6F74
+type=PATH msg=audit(1775384645.987:291): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.987:291): item=1 name="/usr/bin/ls" inode=1442888 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384645.987:291): item=0 name="/usr/bin/ls" inode=1442888 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384645.987:291): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384645.987:291): argc=2 a0="ls" a1="/root"
+type=SYSCALL msg=audit(1775384645.987:291): arch=c000003e syscall=59 success=yes exit=0 a0=5563872997d8 a1=5563872ac220 a2=55638733fc30 a3=0 items=3 ppid=4160 pid=4161 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="ls" exe="/usr/bin/ls" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:17 2026
+type=PROCTITLE msg=audit(1775384657.131:294): proctitle=2F62696E2F7368002D630072756E2D7061727473202D2D7265706F7274202F6574632F63726F6E2E7765656B6C79
+type=PATH msg=audit(1775384657.131:294): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:294): item=1 name="/bin/sh" inode=1443058 dev=08:01 mode=0120777 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:294): item=0 name="/bin/sh" inode=1443048 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384657.131:294): cwd="/"
+type=EXECVE msg=audit(1775384657.131:294): argc=3 a0="/bin/sh" a1="-c" a2=72756E2D7061727473202D2D7265706F7274202F6574632F63726F6E2E7765656B6C79
+type=SYSCALL msg=audit(1775384657.131:294): arch=c000003e syscall=59 success=yes exit=0 a0=564fff9a5cea a1=7ffff4b1d4c0 a2=56502e8182f0 a3=564fff9a5cea items=3 ppid=660 pid=4162 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sh" exe="/usr/bin/dash" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:17 2026
+type=PROCTITLE msg=audit(1775384657.131:295): proctitle=72756E2D7061727473002D2D7265706F7274002F6574632F63726F6E2E7765656B6C79
+type=PATH msg=audit(1775384657.131:295): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:295): item=1 name="/bin/run-parts" inode=1442534 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:295): item=0 name="/bin/run-parts" inode=1442534 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384657.131:295): cwd="/"
+type=EXECVE msg=audit(1775384657.131:295): argc=3 a0="run-parts" a1="--report" a2="/etc/cron.weekly"
+type=SYSCALL msg=audit(1775384657.131:295): arch=c000003e syscall=59 success=yes exit=0 a0=55746edc6718 a1=55744444c938 a2=55744444c958 a3=8 items=3 ppid=4162 pid=4163 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="run-parts" exe="/usr/bin/run-parts" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:17 2026
+type=PROCTITLE msg=audit(1775384657.131:296): proctitle=2F62696E2F7368002F6574632F63726F6E2E7765656B6C792F30616E6163726F6E
+type=PATH msg=audit(1775384657.131:296): item=3 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:296): item=2 name="/bin/sh" inode=1443048 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:296): item=1 name="/etc/cron.weekly/0anacron" inode=3146685 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:296): item=0 name="/etc/cron.weekly/0anacron" inode=3146685 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384657.131:296): cwd="/"
+type=EXECVE msg=audit(1775384657.131:296): argc=2 a0="/bin/sh" a1="/etc/cron.weekly/0anacron"
+type=SYSCALL msg=audit(1775384657.131:296): arch=c000003e syscall=59 success=yes exit=0 a0=55836de0f8e0 a1=55836de052a0 a2=7ffdc1cd4fe8 a3=0 items=4 ppid=4163 pid=4164 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="0anacron" exe="/usr/bin/dash" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:17 2026
+type=PROCTITLE msg=audit(1775384657.131:297): proctitle=616E6163726F6E002D750063726F6E2E7765656B6C79
+type=PATH msg=audit(1775384657.131:297): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:297): item=1 name="/sbin/anacron" inode=1485482 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.131:297): item=0 name="/sbin/anacron" inode=1485482 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384657.131:297): cwd="/"
+type=EXECVE msg=audit(1775384657.131:297): argc=3 a0="anacron" a1="-u" a2="cron.weekly"
+type=SYSCALL msg=audit(1775384657.131:297): arch=c000003e syscall=59 success=yes exit=0 a0=55af32f12978 a1=55af32f128e0 a2=55af32f12900 a3=8 items=3 ppid=4164 pid=4165 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="anacron" exe="/usr/sbin/anacron" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:17 2026
+type=PROCTITLE msg=audit(1775384657.135:298): proctitle=2F62696E2F7368002F6574632F63726F6E2E7765656B6C792F6D616E2D6462
+type=PATH msg=audit(1775384657.135:298): item=3 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.135:298): item=2 name="/bin/sh" inode=1443048 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.135:298): item=1 name="/etc/cron.weekly/man-db" inode=3146670 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384657.135:298): item=0 name="/etc/cron.weekly/man-db" inode=3146670 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384657.135:298): cwd="/"
+type=EXECVE msg=audit(1775384657.135:298): argc=2 a0="/bin/sh" a1="/etc/cron.weekly/man-db"
+type=SYSCALL msg=audit(1775384657.135:298): arch=c000003e syscall=59 success=yes exit=0 a0=55836de0f910 a1=55836de052a0 a2=7ffdc1cd4fe8 a3=0 items=4 ppid=4163 pid=4167 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="man-db" exe="/usr/bin/dash" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:29 2026
+type=PROCTITLE msg=audit(1775384669.959:300): proctitle=7375646F00746565002D61002F6574632F7373682F737368645F636F6E666967
+type=PATH msg=audit(1775384669.959:300): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.959:300): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.959:300): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384669.959:300): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384669.959:300): argc=4 a0="sudo" a1="tee" a2="-a" a3="/etc/ssh/sshd_config"
+type=SYSCALL msg=audit(1775384669.959:300): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16cfb10 a1=55b6e16ed2c0 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4173 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:29 2026
+type=PROCTITLE msg=audit(1775384669.971:301): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384669.971:301): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.971:301): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.971:301): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384669.971:301): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384669.971:301): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384669.971:301): arch=c000003e syscall=59 success=yes exit=0 a0=7fee9235104a a1=7ffe6648ae50 a2=7fee92354018 a3=0 items=3 ppid=4173 pid=4174 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:24:29 2026
+type=PROCTITLE msg=audit(1775384669.971:307): proctitle=746565002D61002F6574632F7373682F737368645F636F6E666967
+type=PATH msg=audit(1775384669.971:307): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.971:307): item=1 name="/usr/bin/tee" inode=1442939 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384669.971:307): item=0 name="/usr/bin/tee" inode=1442939 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384669.971:307): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384669.971:307): argc=3 a0="tee" a1="-a" a2="/etc/ssh/sshd_config"
+type=SYSCALL msg=audit(1775384669.971:307): arch=c000003e syscall=59 success=yes exit=0 a0=55ebecff97d8 a1=55ebed00c220 a2=55ebed09fc40 a3=0 items=3 ppid=4175 pid=4176 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="tee" exe="/usr/bin/tee" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:40 2026
+type=PROCTITLE msg=audit(1775384680.929:311): proctitle=746F756368002F726F6F742F7465737466696C65
+type=PATH msg=audit(1775384680.929:311): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384680.929:311): item=1 name="/usr/bin/touch" inode=1442942 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384680.929:311): item=0 name="/usr/bin/touch" inode=1442942 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384680.929:311): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384680.929:311): argc=2 a0="touch" a1="/root/testfile"
+type=SYSCALL msg=audit(1775384680.929:311): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec340 a1=55b6e16ec2c0 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4177 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="touch" exe="/usr/bin/touch" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:40 2026
+type=PROCTITLE msg=audit(1775384680.933:312): proctitle=63686D6F64002B72002F726F6F742F7465737466696C65
+type=PATH msg=audit(1775384680.933:312): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384680.933:312): item=1 name="/usr/bin/chmod" inode=1442854 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384680.933:312): item=0 name="/usr/bin/chmod" inode=1442854 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384680.933:312): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384680.933:312): argc=3 a0="chmod" a1="+r" a2="/root/testfile"
+type=SYSCALL msg=audit(1775384680.933:312): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ed360 a1=55b6e16ed200 a2=55b6e16c9130 a3=8 items=3 ppid=4123 pid=4178 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="chmod" exe="/usr/bin/chmod" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:57 2026
+type=PROCTITLE msg=audit(1775384697.334:313): proctitle=7375646F006175736561726368002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384697.334:313): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.334:313): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.334:313): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384697.334:313): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384697.334:313): argc=4 a0="sudo" a1="ausearch" a2="-k" a3="sshd_config"
+type=SYSCALL msg=audit(1775384697.334:313): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16cfb10 a1=55b6e16ec0d0 a2=55b6e16c9130 a3=0 items=3 ppid=4123 pid=4179 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:24:57 2026
+type=PROCTITLE msg=audit(1775384697.346:314): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384697.346:314): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.346:314): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.346:314): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384697.346:314): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384697.346:314): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384697.346:314): arch=c000003e syscall=59 success=yes exit=0 a0=7f70e3a9104a a1=7ffc46ebb930 a2=7f70e3a94018 a3=0 items=3 ppid=4179 pid=4180 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:24:57 2026
+type=PROCTITLE msg=audit(1775384697.350:320): proctitle=6175736561726368002D6B00737368645F636F6E666967
+type=PATH msg=audit(1775384697.350:320): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.350:320): item=1 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384697.350:320): item=0 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384697.350:320): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384697.350:320): argc=3 a0="ausearch" a1="-k" a2="sshd_config"
+type=SYSCALL msg=audit(1775384697.350:320): arch=c000003e syscall=59 success=yes exit=0 a0=55926e814c18 a1=55926e781220 a2=55926e814c40 a3=0 items=3 ppid=4181 pid=4182 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="ausearch" exe="/usr/sbin/ausearch" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:25:10 2026
+type=PROCTITLE msg=audit(1775384710.280:323): proctitle=7375646F006175736561726368002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384710.280:323): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.280:323): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.280:323): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384710.280:323): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384710.280:323): argc=4 a0="sudo" a1="ausearch" a2="-k" a3="file_perms"
+type=SYSCALL msg=audit(1775384710.280:323): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ec2a0 a1=55b6e16ec0d0 a2=55b6e16c9130 a3=0 items=3 ppid=4123 pid=4183 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:25:10 2026
+type=PROCTITLE msg=audit(1775384710.288:324): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384710.288:324): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.288:324): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.288:324): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384710.288:324): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384710.288:324): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384710.288:324): arch=c000003e syscall=59 success=yes exit=0 a0=7f6079b5104a a1=7fff6996cbe0 a2=7f6079b54018 a3=0 items=3 ppid=4183 pid=4184 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:25:10 2026
+type=PROCTITLE msg=audit(1775384710.292:330): proctitle=6175736561726368002D6B0066696C655F7065726D73
+type=PATH msg=audit(1775384710.292:330): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.292:330): item=1 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384710.292:330): item=0 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384710.292:330): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384710.292:330): argc=3 a0="ausearch" a1="-k" a2="file_perms"
+type=SYSCALL msg=audit(1775384710.292:330): arch=c000003e syscall=59 success=yes exit=0 a0=5571328fec18 a1=55713286b220 a2=5571328fec40 a3=0 items=3 ppid=4185 pid=4186 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="ausearch" exe="/usr/sbin/ausearch" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:25:21 2026
+type=PROCTITLE msg=audit(1775384721.918:333): proctitle=7375646F006175736561726368002D6B00707269765F657363
+type=PATH msg=audit(1775384721.918:333): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.918:333): item=1 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.918:333): item=0 name="/usr/bin/sudo" inode=1480687 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384721.918:333): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384721.918:333): argc=4 a0="sudo" a1="ausearch" a2="-k" a3="priv_esc"
+type=SYSCALL msg=audit(1775384721.918:333): arch=c000003e syscall=59 success=yes exit=0 a0=55b6e16ed4e0 a1=55b6e16ec0d0 a2=55b6e16c9130 a3=0 items=3 ppid=4123 pid=4187 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm="sudo" exe="/usr/bin/sudo" subj=unconfined key="priv_esc"
+----
+time->Sun Apr  5 13:25:21 2026
+type=PROCTITLE msg=audit(1775384721.930:334): proctitle=2F7573722F7362696E2F756E69785F63686B70776400726F6F740063686B657870697279
+type=PATH msg=audit(1775384721.930:334): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.930:334): item=1 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.930:334): item=0 name="/usr/sbin/unix_chkpwd" inode=1443763 dev=08:01 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384721.930:334): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384721.930:334): argc=3 a0="/usr/sbin/unix_chkpwd" a1="root" a2="chkexpiry"
+type=SYSCALL msg=audit(1775384721.930:334): arch=c000003e syscall=59 success=yes exit=0 a0=7fc5332be04a a1=7ffe63e2c970 a2=7fc5332c1018 a3=0 items=3 ppid=4187 pid=4188 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts1 ses=5 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="priv_esc"
+----
+time->Sun Apr  5 13:25:21 2026
+type=PROCTITLE msg=audit(1775384721.934:340): proctitle=6175736561726368002D6B00707269765F657363
+type=PATH msg=audit(1775384721.934:340): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1444666 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.934:340): item=1 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1775384721.934:340): item=0 name="/usr/sbin/ausearch" inode=1499802 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1775384721.934:340): cwd="/home/temniynik"
+type=EXECVE msg=audit(1775384721.934:340): argc=3 a0="ausearch" a1="-k" a2="priv_esc"
+type=SYSCALL msg=audit(1775384721.934:340): arch=c000003e syscall=59 success=yes exit=0 a0=55e629739c18 a1=55e6296a6220 a2=55e629739c40 a3=0 items=3 ppid=4189 pid=4190 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="ausearch" exe="/usr/sbin/ausearch" subj=unconfined key="priv_esc"
